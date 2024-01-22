@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: white;
+    color: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  background: transparent;
+  z-index: 1000; /* Ensure the navbar is on top of other elements */
+}
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu ul li{
+    list-style-type: none;
+    padding: 1em 2em;
+
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.logo h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+.container{
+    top: 0;
+    position: relative;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+    background-color: #0f0f0f; /* Example color */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    border-radius: 10px;
+    left: 0;
+    background-color: #0f0f0f; /* Example background color */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .user-dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .btn-dropdown-join{
+    
+    line-height: 3em;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .content-drop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .content-drop a:hover{
+    content: "";
+    background-color: white;
+    color: #0f0f0f;
+    border-radius:10px ;
+    width: 100%;
+    text-align: center;
+
+
+
+  }
+
+
+
+
+
+  /* home page  */
+
+  .wrapper{
+    height: 70vh;
+  }
+  .wrapper video{
+    position: relative;
+    /* height: 142vh; */
+    width: 100%;
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    filter: brightness(0.4);
+    object-fit: cover;
+  }
+
+  .wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+ 
+  .text-hero h1{
+    font-size: 2.5rem;
+    width: 100%;
+    color: white;
+    line-height: 1em;
+  }
+  .form-content{
+    width: 100%;
+  }
+  .form-content input{
+    padding-left: 18em;
+    padding-right: 18em;
+    padding-top: 1em;
+    border-radius: 10px;
+    border: none;
+    padding-bottom: 1em;
+    position: relative;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .form-content i{
+    color: #000000;
+    position: absolute;
+    left: 75%;
+    top: 76%;
+  }
+
+
+  .control-panel{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+
+  .control-panel ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  .control-panel ul li{
+    list-style-type: none;
+    padding: 5px 15px 5px;
+  }
+  .active{
+    background-color: #0f0f0f;
+    color: white !important;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .control-panel ul li a{
+    text-decoration: none;
+    color: #0f0f0f;
+    padding: 1em;
+    font-weight: 500;
+    cursor: pointer;
+
+  }
+
+
+
+
+  /* gallery  */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Set the aspect ratio to 1:1, you can adjust this based on your preference */
+    object-fit: cover;
+    display: block;
+}
+
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+.head-wrap h3{
+  font-size: 2rem;
+  font-weight: 800;
+}
+.head-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2em;
+  margin-right: 5em;
+}

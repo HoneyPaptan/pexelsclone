@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Pexel{% endblock title %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="wrapper">
+        <video autoplay muted loop id="myVideo">
+            <source src="{% static 'assets/vid.mp4' %}" type="video/mp4">
+        </video>
+        <div class="wrap">
+            <div class="text-hero">
+                <h1>The best free stock photos, royalty free <br> images & videos shared by creators.</h1>
+            </div>
+            <div class="search-hero">
+                <div class="form">
+                    <form>
+                        <div class="form-content">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="control-panel">
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Photos</a></li>
+    </ul>
+</div>
+
+
+
+<div class="heading-gallery">
+    <div class="head-wrap">
+        <h3>Trending Stock Photos</h3>
+        <label class="dropdown">
+
+            <div class="dd-button">
+              Trending
+            </div>
+          
+            <input type="checkbox" class="dd-input" id="test">
+          
+            <ul class="dd-menu">
+              <li>Newest</li>
+              <li>Popular</li>
+              <li>Oldest</li>
+             
+            </ul>
+            
+          </label>
+       
+    </div>
+
+</div>
+
+<div class="gallery">
+    <!-- Add your image URLs here -->
+    <img src="https://source.unsplash.com/collection/582659/1" alt="Image 1">
+    <img src="https://source.unsplash.com/collection/582659/2" alt="Image 2">
+    <img src="https://source.unsplash.com/collection/582659/3" alt="Image 3">
+    <img src="https://source.unsplash.com/collection/582659/4" alt="Image 3">
+    <img src="https://source.unsplash.com/collection/582659/5" alt="Image 3">
+    <img src="https://source.unsplash.com/collection/582659/6" alt="Image 3">
+    <img src="https://source.unsplash.com/collection/582659/7" alt="Image 3">
+    <img src="https://source.unsplash.com/collection/582659/8" alt="Image 3">
+    <img src="https://source.unsplash.com/collection/582659/9" alt="Image 3">
+    <!-- Add more images as needed -->
+</div>
+{% endblock content %}

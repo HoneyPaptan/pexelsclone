@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/6903b50715.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <h1>Pexel</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">License</a></li>
+                {% if user.isauthenticated %}
+                <div class="user-dropdown">
+                    <button class="user-icon" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user" style="color: #ffffff;"></i></button>
+                    <div class="dropdown-content">
+                        <div class="content-drop">
+                            <!-- Your dropdown content here -->
+                            <a href="#" class="btn-dropdown-join">Join</a>
+                            <a href="#" class="btn-dropdown-join">Logout</a>
+                            <a href="#" class="btn-dropdown-join">Discover</a>
+
+                        </div>
+                    </div>
+                  </div>
+                {% else %}
+                <li><a href="#">Upload</a></li>
+                {% endif %}
+                <li><a href="#" class="btn-join">Join</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    {% block content %}{% endblock content %}
+
+
+    {% block js %}{% endblock js %}
+</body>
+</html>
